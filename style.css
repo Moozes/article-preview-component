@@ -1,0 +1,170 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+    --Font-size: 13px
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: var(--Font-size);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height : 100vh;
+
+    color : var(--Very-Dark-Grayish-Blue);
+    background: var(--Light-Grayish-Blue) ;
+}
+
+.card {
+    width : 600px;
+
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 3%;
+    /* overflow: hidden; */
+}
+
+.card .left {
+    flex-basis: 40%;
+    align-self: stretch;
+
+    background: url('images/drawers.jpg') no-repeat left center/cover;
+}
+
+.right {
+    flex-basis: 60%;
+    padding : 20px;
+}
+
+.right h2 {
+    margin-bottom : 20px;
+}
+
+.right p {
+    margin-bottom : 20px;
+    color : var(--Desaturated-Dark-Blue);
+}
+
+.right .right-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position : relative;
+    /* border : 1px solid black; */
+}
+
+.right .right-footer img {
+    width : 40px;
+    border-radius: 50%;
+    margin-right : 10px;
+}
+
+.right .right-footer .personel-info span {
+    color : var(--Desaturated-Dark-Blue);
+}
+
+.right .right-footer .share-icon-container {
+    flex : 1;
+    text-align: right;
+
+    position : relative;
+    /* border : 1px solid black; */
+}
+
+.right .right-footer .share-icon-container > img {
+    width: 25px;
+    background: var(--Light-Grayish-Blue);
+    padding: 5px;
+    transition: background-color 0.5s ease;
+}
+
+.right .right-footer .share-icon-container > img:hover  {
+    cursor: pointer;
+    /* color : var(--Light-Grayish-Blue);
+    background: var(--Very-Dark-Grayish-Blue); */
+    
+}
+
+.right .right-footer .share-icons {
+    background-color: var(--Very-Dark-Grayish-Blue);
+    display : flex;
+    align-items: center;
+    justify-content: space-around;
+
+    border-radius: 5%;
+
+    position: absolute;
+    top : -40px;
+    right : -40px;
+
+    height : 35px;
+    min-width : 190px;
+}
+
+.right .right-footer .share-icons img {
+    width : 28px;
+    padding: 5px;
+    margin: 0;
+}
+
+.right .right-footer .share-icons span{
+ color : var(--Desaturated-Dark-Blue);
+    padding : 0 10px;
+}
+
+.right .right-footer .share-icons img {
+    background-color: var(--Very-Dark-Grayish-Blue);
+    cursor: pointer;
+    margin : 0 1px;
+}
+
+.active {
+    display: inline;
+}
+
+.none-active {
+    display: none;
+}
+
+@media(max-width : 640px) {
+    .card {
+        display: block;
+        width : 400px;
+    }
+
+    .card .left {
+        height : 210px;
+        /* border : 1px solid black; */
+        background: url('images/drawers.jpg') no-repeat left top/cover;
+    }
+
+    .card .right {
+        margin-top :20px;
+    }
+
+    .card .right h2 {
+        margin-bottom: 15px;
+    }
+
+    .card .right p {
+        margin-bottom: 30px;
+    }
+
+    
+
+}
